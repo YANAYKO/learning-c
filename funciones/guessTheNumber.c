@@ -46,7 +46,7 @@ void guess_the_number(void)
     unsigned int n, n_guess; // n es el input del usuario, n_gues es el numero que se adivinara
     bool encontrado; // variable logica para verificar si se encontro el numero
 
-    n_guess =  1 + (rand() % 10); // genera un numero aleatorio entre 1 - 1000
+    n_guess =  1 + (rand() % 1000); // genera un numero aleatorio entre 1 - 1000
     encontrado = false; // false significa que aun el usuario no ha adivinado el numero
 
     printf("type your first guess: ");
