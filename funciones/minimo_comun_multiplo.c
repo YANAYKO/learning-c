@@ -13,6 +13,7 @@ int main(void)
     scanf("%d%d", &n1, &n2);
 
     printf("LCM: %d\n", lcm(n1, n2));
+    
     return EXIT_SUCCESS;
 }
 
