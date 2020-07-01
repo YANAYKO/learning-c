@@ -1,4 +1,3 @@
-
 /*
     bisiesto -> febrero -> 29 dias
     bisiesto si
@@ -22,7 +21,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-
 // prototipo
 bool verificar_fecha(int, int, int);
 bool es_bisiesto(int);
@@ -35,6 +33,7 @@ int main(void)
     scanf("%d %d %d", &day, &month, &year);
 
     verificar_fecha(day, month, year) ? printf("Valido\n") : printf("No Valido\n");
+    
     return EXIT_SUCCESS;
 }
 
