@@ -22,7 +22,7 @@ void guess_the_number(void);
 
 int main(void)
 {
-    // genera un seed diferente cada vez que se ejecuta el programa
+    // genera un seed
     srand(time(NULL));
 
     char decision;
