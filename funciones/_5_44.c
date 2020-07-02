@@ -7,8 +7,8 @@ int mystery(int, int);
 int main(void)
 {
     printf("%s", "Ingresa dos enteros positivos: ");
-    int x; // primer entero
-    int y; // segundo entero
+    unsigned int x; // primer entero
+    unsigned int y; // segundo entero
 
     scanf("%d%d", &x, &y);
 
