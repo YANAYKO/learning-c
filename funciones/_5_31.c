@@ -10,10 +10,34 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
+int flip();
 
 int main(void)
 {
-    
+    srand(time(NULL));
+    int c_tail = 0, c_head = 0;
+
+    for (int i = 0; i < 100; ++i)
+    {
+        if (flip() == 1)
+        {
+            puts("Head");
+            c_head++;
+        } else {
+            puts("Tail");
+            c_tail++;
+        }
+        //printf("%d\n", flip());
+    }
+    puts("------Resultado------");
+    printf("%s: %d\n", "Tails", c_tail);
+    printf("%s: %d\n", "Heads", c_head);
     return EXIT_SUCCESS;
+}
+
+int flip()
+{
+    return (rand() % 2); // 0  for  tails  and  1  for  heads
 }

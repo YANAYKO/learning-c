@@ -15,7 +15,7 @@ bool isPerfect(int n);
 
 int main(void)
 {
-    printf("Umeros perfectos: \n");
+    puts("Numeros perfectos entre 1 - 1000:");
 
     for (int num = 1; num < 1000; num++)
     {

@@ -29,15 +29,18 @@ void quadratic_equation(double a, double b, double c)
     {
         x1 = (-b + sqrt(d)) / (2 * a);
         x2 = (-b - sqrt(d)) / (2 * a);
+
         puts("Raices reales:");
         printf("x1: %.2f\nx2: %.2f\n", x1, x2);
     } else if (d == 0) {
         x1 = x2 = -b / (2 * a);
+
         puts("Una raiz:");
         printf("x1: %.2f\nx2: %.2f\n", x1, x2);
     } else {
         real = -b / (2 * a);
         imaginary = sqrt(fabs(d)) / (2 * a);
+        
         puts("Raices Imaginarias:");
         printf("x1: %.2f + %.2fi\nx2: %.2f - %.2fi\n", real, imaginary, real, imaginary);
     }
