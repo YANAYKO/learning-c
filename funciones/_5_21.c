@@ -22,7 +22,7 @@ int main(void)
 
     printf("%s", "Ingrese altura y un caracter:\n");
     scanf("%u %c", &h, &ch);
-    /*
+    
     printf("\nTriangulo rectangulo:\n");
     triangulo_rectangulo(h, ch);
 
@@ -34,7 +34,7 @@ int main(void)
     
    
     printf("\nTriangulo equilatero Inverso:\n");
-    triangulo_equilatero_inverso(h, ch); */
+    triangulo_equilatero_inverso(h, ch);
     
     printf("\nTriangulo Isosceles:\n");
     triangulo_isosceles(h, ch);
