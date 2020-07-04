@@ -33,7 +33,7 @@ int main(void)
     
     do {
         printf("Would you like to play again (y or n)? ");
-        scanf("%c", &decision); // lee la decision del usuario para continuar
+        scanf(" %c", &decision); // lee la decision del usuario para continuar
 
         if (decision == 'y') guess_the_number(); // si el usuario elige continuar, se llama de nuevo a la funcion
     } while (decision != 'n'); // el bucle termina cuando el usuario escribe 'n'
