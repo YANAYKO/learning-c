@@ -15,10 +15,40 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include <stdbool.h>
 
+void pregunta(unsigned int, unsigned int);
 
 int main(void)
 {
+    srand(time(NULL));
+    unsigned int r, a, b;
+    unsigned int res;
+
+    
+    for (int i = 0; i < 10;  ++i) 
+    {
+        a = 1 + (rand() % 9);
+        b = 1 + (rand() % 9);
+        r = a * b;
+
+        pregunta(a, b);
+
+        scanf("%u", &res);
+        while (r != res)
+        {
+            puts("No. Please try again.");
+            pregunta(a, b);
+            scanf("%u", &res); 
+        }
+        puts("Very good!.");    
+    }
     
     return EXIT_SUCCESS;
+}
+
+void pregunta(unsigned int n1, unsigned int n2)
+{
+    printf("How much is %u times %u?: ", n1, n2);
 }
