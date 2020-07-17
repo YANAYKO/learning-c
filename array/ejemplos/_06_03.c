@@ -21,5 +21,5 @@ int main(void)
         printf("%7u%13d\n", i, n[i]);
     }
 
-    return 0;
+    return 0; // el programa termina con exito
 }
