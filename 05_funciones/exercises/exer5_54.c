@@ -7,8 +7,8 @@
 #include <time.h>
 
 void pregunta(unsigned int, unsigned int, unsigned int);
-void mensaje(unsigned int);
-int random_msg(unsigned int, unsigned int);
+void mensaje_positivo();
+void mensaje_negativo();
 unsigned int menu_dificultad(void);
 int random_diff(unsigned int);
 unsigned int menu_operacion(void);
@@ -19,7 +19,8 @@ int main(void)
     srand(time(NULL));
 
     unsigned int r, a, b, res;
-    unsigned int correct = 0, incorrect = 0;
+    unsigned int correct = 0;
+    unsigned int incorrect = 0;
     unsigned int diff;
     unsigned int operation, random_op;
 
@@ -45,10 +46,10 @@ int main(void)
         // verificacion de si la respuesta es correcta o no
         if (r != res)
         {
-            incorrect++; // suma la primera respuesta erronea
-            while (incorrect != (10 - correct) && r != res) // el loop se repite hasta que el usuario acierte la respuesta
+            incorrect++;
+            while (incorrect != (10 - correct) && r != res)
             {
-                mensaje(random_msg(5, 8)); // mensaje negativo random para mostrar
+                mensaje_negativo(); // mensaje negativo random para mostrar
                 pregunta(a, b, random_op); // realiza la misma pregunta
                 scanf("%u", &res); // lee una respuesta desde consola
                 incorrect++; // cuenta las veces en que se equivoco
@@ -58,7 +59,7 @@ int main(void)
         if (r == res) // acierta la respuesta
         {
             correct++;
-            mensaje(random_msg(1, 4)); // mensaje positvo random para mostrar
+            mensaje_positivo(); // mensaje positvo random para mostrar
         }
 
         if (correct + incorrect == 10) // las suma  de las respuestas correctas e incorrectas debe ser 10
@@ -120,11 +121,6 @@ int operacion_aritmetica(unsigned int a, unsigned int b, unsigned int op)
     }
 }
 
-int random_msg(unsigned int n, unsigned int m)
-{
-    return (rand() % (m - n + 1) + n); // rand() % (max - min + 1) + min
-}
-
 int random_diff(unsigned int d)
 {
     switch (d)
@@ -163,8 +159,9 @@ void pregunta(unsigned int n1, unsigned int n2, unsigned int op)
     printf("How much is %u %c %u?: ", n1, oper, n2);
 }
 
-void mensaje(unsigned int n)
+void mensaje_positivo()
 {
+    int n = rand() % 4 + 1;
     switch (n)
     {
         case 1:
@@ -179,16 +176,24 @@ void mensaje(unsigned int n)
         case 4:
             puts("Keep up the good work!");
             break;
-        case 5:
+    }
+}
+
+void mensaje_negativo()
+{
+    int n = rand() % 4 + 1;
+    switch (n)
+    {
+        case 1:
             puts("No. Please try again.");
             break;
-        case 6:
+        case 2:
             puts("Wrong. Try once more.");
             break;
-        case 7:
+        case 3:
             puts("Don't give up!");
             break;
-        case 8:
+        case 4:
             puts("No. Keep trying.");
             break;
     }
