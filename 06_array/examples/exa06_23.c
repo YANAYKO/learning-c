@@ -5,6 +5,12 @@
 void print1DArray(size_t size, int array[size]);
 void print2DArray(int fila, int colum, int array[fila][colum]);
 
+struct exa06_23
+{
+    /* data */
+};
+
+
 int main(void)
 {
     printf("%s", "Ingrese el size de un array de una dimension: ");
