@@ -1,7 +1,13 @@
 /*
     (Union of Sets) Use one-dimensional arrays to solve the following problem. Read in two
     sets of numbers, each having 10 numbers. After reading all values, display all the unique elements
-    in the collection of both sets of numbers. Use the smallest possible array to solve this problem.   
+    in the collection of both sets of numbers. Use the smallest possible array to solve this problem.
+    
+    ////////////////////////////////////////////
+    (Unión de conjuntos) Use las matrices unidimensionales para resolver el siguiente problema. 
+    Leer en dos conjuntos de números, cada uno con 10 números. Después de leer todos los valores, 
+    muestre todos los elementos únicos en la colección de ambos conjuntos de números. Usa la matriz 
+    más pequeña posible para resolver este problema. 
 */
 
 #include <stdio.h>
