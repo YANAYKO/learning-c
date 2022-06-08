@@ -14,7 +14,8 @@ int main(void) {
 }
 
 
-// funcion "cuadrado" que devuelve el cuadrado de su parametro
+// definicion de la funcion "cuadrado" que devuelve el cuadrado de su parametro
 int cuadrado(int numero) {
-    return numero * numero; // retorna el cuadrado de la variable numero como entero
+    // retorna el cuadrado de la variable numero como un entero
+    return numero * numero;
 }
